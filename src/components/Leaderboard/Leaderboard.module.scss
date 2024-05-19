@@ -1,0 +1,32 @@
+.Leaderboard {
+  // min-height: 100vh;
+  // display: flex;
+  // align-items: center;
+  // justify-content: center;
+
+  background: #f1f5f9;
+
+  width: 300px;
+  position: fixed;
+  z-index: 999;
+  // inset: 0;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, 0);
+
+  .board {
+    font-size: 2rem;
+    padding: 1rem;
+    outline: solid 1px red;
+
+    li {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+    span:first-child::before {
+      counter-increment: topper;
+      content: counter(topper) ".  ";
+    }
+  }
+}

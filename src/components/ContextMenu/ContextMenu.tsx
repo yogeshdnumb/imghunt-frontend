@@ -20,7 +20,7 @@ export default function ContextMenu({
             key={findable._id}
             onClick={async () => {
               const response = await api.get(`findable/${findable._id}`);
-              console.log(response.data.coords);
+              // console.log(response.data.coords);
 
               if (
                 clickedCoordsRef.current.x >= response.data.coords.x1 &&
@@ -35,9 +35,8 @@ export default function ContextMenu({
                   setFounds([...founds, findable._id]);
                 }
                 // alert("found");
-              } else {
-                console.log("not inside");
               }
+              // console.log("not inside");
             }}
           >
             <img

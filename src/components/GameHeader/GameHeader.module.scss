@@ -6,6 +6,7 @@
   padding-inline: 1rem;
 
   color: #dbeafe;
+  font-size: 2rem;
 
   // background-color: #94a3b8;
   background-color: #64748b;
@@ -17,9 +18,8 @@
   top: 0;
 
   .logo {
-    font-family: "Alpino", sans-serif;
-    font-size: 2rem;
     font-weight: 700;
+    font-family: "Alpino", sans-serif;
   }
 
   .timer {
@@ -35,6 +35,16 @@
     img {
       border-radius: 8px;
     }
+  }
+  button {
+    // color: white;
+    background-color: #dbeafe;
+
+    color: #020617;
+    border-radius: 8px;
+    padding: 0.5rem;
+    font-family: "Alpino", sans-serif;
+    font-weight: 500;
   }
   .found {
     // opacity: 0.8;
