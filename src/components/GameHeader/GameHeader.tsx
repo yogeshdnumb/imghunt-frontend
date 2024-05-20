@@ -13,6 +13,7 @@ export default function GameHeader({
   setSeconds,
   findables,
   founds,
+  isImgLoading,
 }) {
   const intervelRef = useRef(null);
   if (founds.length == 3) {
@@ -20,7 +21,9 @@ export default function GameHeader({
   }
   return (
     <header className={styles.Header}>
-      <div className={styles.logo}>ImgHunt</div>
+      <div className={styles.logo}>
+        <Link to={"/"}>ImgHunt</Link>
+      </div>
       {isStarted ? (
         <div className={styles.timer}>
           <Clock size={32}></Clock>
@@ -31,11 +34,13 @@ export default function GameHeader({
           onClick={() => {
             console.log("CCC");
 
-            setIsStarted(true);
-            intervelRef.current = setInterval(() => {
-              // setNow(Date.now());
-              setSeconds((s) => s + 0.1);
-            }, 100);
+            if (!isImgLoading) {
+              setIsStarted(true);
+              intervelRef.current = setInterval(() => {
+                // setNow(Date.now());
+                setSeconds((s) => s + 0.1);
+              }, 100);
+            }
           }}
         >
           START

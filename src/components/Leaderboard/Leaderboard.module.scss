@@ -1,12 +1,14 @@
 .Leaderboard {
+  font-size: 1.75rem;
   // min-height: 100vh;
   // display: flex;
   // align-items: center;
   // justify-content: center;
 
   background: #f1f5f9;
+  border-radius: 8px;
 
-  width: 300px;
+  min-width: 300px;
   position: fixed;
   z-index: 999;
   // inset: 0;
@@ -14,11 +16,18 @@
   left: 50%;
   transform: translate(-50%, 0);
 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
   .board {
     font-size: 2rem;
     padding: 1rem;
-    outline: solid 1px red;
-
+    // outline: solid 1px red;
+    h2 {
+      text-align: center;
+    }
     li {
       display: flex;
       justify-content: space-between;
@@ -27,6 +36,34 @@
     span:first-child::before {
       counter-increment: topper;
       content: counter(topper) ".  ";
+    }
+  }
+  .prompt {
+    width: 400px;
+    gap: 0.3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    // border: 2px solid red;
+    padding: 1rem;
+    input {
+      // display: inline-block;
+      // min-height: 20px;
+    }
+  }
+  nav {
+    font-size: 2rem;
+    span {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.4rem;
+    }
+
+    a {
+      text-decoration: none;
+      color: black;
     }
   }
 }

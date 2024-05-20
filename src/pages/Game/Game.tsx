@@ -54,6 +54,7 @@ export default function Game() {
           founds={founds}
           setIsStarted={setIsStarted}
           isStarted={isStarted}
+          isImgLoading={isImgLoading}
         ></GameHeader>
         {isImgLoading && <Loader size={200}></Loader>}
         <img

@@ -20,6 +20,10 @@
   .logo {
     font-weight: 700;
     font-family: "Alpino", sans-serif;
+    a {
+      text-decoration: none;
+      color: #dbeafe;
+    }
   }
 
   .timer {
@@ -27,6 +31,7 @@
     align-items: center;
     gap: 0.4rem;
     font-size: 2rem;
+    font-family: sans-serif;
   }
   .findables {
     // padding: 1rem;
