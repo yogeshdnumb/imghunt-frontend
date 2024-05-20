@@ -7,15 +7,15 @@ export default function useFetch(url) {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    console.log(url);
+    // console.log(url);
 
     async function effect() {
       try {
         const response = await api.get(url);
-        console.log(response.data);
+        // console.log(response.data);
         setData(response.data);
       } catch (err) {
-        console.log(err);
+        // console.log(err);
         setError(err);
       } finally {
         setIsLoading(false);
